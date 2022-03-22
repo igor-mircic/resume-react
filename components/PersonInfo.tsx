@@ -1,27 +1,20 @@
 import Image from "next/image";
+import React, { FC } from "react";
 
-interface Props {
+export interface IPersonInfo {
   img: string;
   name: string;
   job: string;
-  //   contact: object;
-  //   mail: object;
   email: string;
-  //   telephone: object;
   phone: number;
-
   //   contact: {
-  //     mail: {
   //       email: string;
-  //     };
-  //     phone: {
   //       phone: number;
-  //     };
   //   };
   desc: string;
 }
 
-const PersonInfo = (props: Props) => {
+const PersonInfo: FC<IPersonInfo> = (props) => {
   return (
     <div>
       <Image src={props.img} alt="profile picture" width={400} height={300} />
@@ -32,13 +25,13 @@ const PersonInfo = (props: Props) => {
         <p>{props.phone}</p>
       </div>
       <p>{props.desc}</p>
-      {/* <contact props={contact}>
-                <mailContainer props={contact.mail}>
-                    <icon props={contact.mail.icon}></icon>
+      {/* <contact>
+                <mailContainer>
+                    <icon></icon>
                     <email props={contact.mail.email}></email>
                 </mailContainer>
-                <phoneContainer props={contact.phone}>
-                    <icon props={contact.phone.icon}></icon>
+                <phoneContainer>
+                    <icon></icon>
                     <phone props={contact.phone.phone}></phone>
                 </phoneContainer>
             </contact> */}
