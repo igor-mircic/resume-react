@@ -8,20 +8,13 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>{personInfo.name} resume</title>
+        <title>{personInfo.name}&apos;s resume</title>
         <meta name="description" content="Resume webpage" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <PersonInfo
-          img={personInfo.img}
-          name={personInfo.name}
-          job={personInfo.job}
-          email={personInfo.email}
-          phone={personInfo.phone}
-          desc={personInfo.desc}
-        ></PersonInfo>
+        <PersonInfo {...personInfo}></PersonInfo>
       </main>
 
       <footer className={styles.footer}></footer>

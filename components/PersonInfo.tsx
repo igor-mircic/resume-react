@@ -2,39 +2,31 @@ import Image from "next/image";
 import React, { FC } from "react";
 
 export interface IPersonInfo {
-  img: string | StaticImageData;
+  img: StaticImageData;
   name: string;
   job: string;
   email: string;
   phone: number;
-  //   contact: {
-  //       email: string;
-  //       phone: number;
-  //   };
   desc: string;
 }
 
-const PersonInfo: FC<IPersonInfo> = (props) => {
+const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
   return (
     <div>
-      <Image src={props.img} alt="profile picture" width={400} height={300} />
-      <p>{props.name}</p>
-      <p>{props.job}</p>
+      <Image
+        src={img}
+        alt="profile picture"
+        width={400}
+        height={300}
+        layout="fixed"
+      />
+      <p>{name}</p>
+      <p>{job}</p>
       <div>
-        <p>{props.email}</p>
-        <p>{props.phone}</p>
+        <p>{email}</p>
+        <p>{phone}</p>
       </div>
-      <p>{props.desc}</p>
-      {/* <contact>
-                <mailContainer>
-                    <icon></icon>
-                    <email props={contact.mail.email}></email>
-                </mailContainer>
-                <phoneContainer>
-                    <icon></icon>
-                    <phone props={contact.phone.phone}></phone>
-                </phoneContainer>
-            </contact> */}
+      <p>{desc}</p>
     </div>
   );
 };
