@@ -1,7 +1,8 @@
 import { IPersonInfo } from '../components/PersonInfo';
+import profPic from '../assets/one-punch-man.jpg';
 
 export const personInfo: IPersonInfo = {
-    img: '/../public/one-punch-man.jpg',
+    img: '/../assets/one-punch-man.jpg',
     name: 'Saitama',
     job: 'C class hero',
     email: 'saitama@kickass.com',

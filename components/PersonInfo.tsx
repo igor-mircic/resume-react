@@ -2,7 +2,7 @@ import Image from "next/image";
 import React, { FC } from "react";
 
 export interface IPersonInfo {
-  img: string;
+  img: string | StaticImageData;
   name: string;
   job: string;
   email: string;
