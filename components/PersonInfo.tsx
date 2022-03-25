@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React, { FC } from "react";
 
 export interface IPersonInfo {
   img: StaticImageData;
