@@ -1,10 +1,13 @@
+// general
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { personInfo } from "../consts/personInfo";
+// components
 import PersonInfo from "../components/PersonInfo";
-import Experiences from "../components/Experiences";
+import ExperiencesList from "../components/ExperiencesList";
+// data
 import { experiences } from "../consts/experiences";
+import { personInfo } from "../consts/personInfo";
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +20,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <PersonInfo {...personInfo}></PersonInfo>
-        <Experiences {...experiences}></Experiences>
+        <ExperiencesList {...{ experiences }}></ExperiencesList>
       </main>
 
       <footer className={styles.footer}></footer>

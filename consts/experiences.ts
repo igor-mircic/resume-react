@@ -2,7 +2,7 @@ import crablante from '../assets/crablante.jpg'
 import vaccman from '../assets/vaccine-man.jpg'
 import marugori from '../assets/marugori.png'
 
-export interface ISingleExp {
+export interface IExperience {
     img?: StaticImageData;
     dateStart: string;
     dateEnd: string;
@@ -10,7 +10,7 @@ export interface ISingleExp {
     jobDesc: string;
 }
 
-export const experiences: ISingleExp[] = [
+export const experiences: IExperience[] = [
     {
         img: vaccman,
         dateStart: "Season 1, Episode 1",
