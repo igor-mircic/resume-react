@@ -1,6 +1,6 @@
-import crablante from '../assets/crablante.jpg'
-import vaccman from '../assets/vaccine-man.jpg'
-import marugori from '../assets/marugori.png'
+import crablante from '../assets/crablante.jpg';
+import vaccman from '../assets/vaccine-man.jpg';
+import marugori from '../assets/marugori.png';
 
 export interface IExperience {
     img?: StaticImageData;
