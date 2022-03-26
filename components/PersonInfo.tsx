@@ -19,7 +19,7 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
         height={300}
         layout="fixed"
       />
-      <p>{name}</p>
+      <h1>{name}</h1>
       <p>{job}</p>
       <div>
         <p>{email}</p>

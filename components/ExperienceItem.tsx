@@ -20,7 +20,7 @@ const ExperienceItem = ({
       <p>
         {dateStart} - {dateEnd}
       </p>
-      <p>{jobTitle}</p>
+      <h3>{jobTitle}</h3>
       <p>{jobDesc}</p>
     </div>
   );

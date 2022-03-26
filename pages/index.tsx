@@ -5,9 +5,11 @@ import styles from "../styles/Home.module.css";
 // components
 import PersonInfo from "../components/PersonInfo";
 import ExperiencesList from "../components/ExperiencesList";
+import HobbiesList from "../components/HobbiesList";
 // data
 import { experiences } from "../consts/experiences";
 import { personInfo } from "../consts/personInfo";
+import { hobbies } from "../consts/hobbies";
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +23,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <PersonInfo {...personInfo}></PersonInfo>
         <ExperiencesList {...{ experiences }}></ExperiencesList>
+        <HobbiesList {...{ hobbies }}></HobbiesList>
       </main>
 
       <footer className={styles.footer}></footer>
