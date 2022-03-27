@@ -1,6 +1,13 @@
-import { IPersonInfo } from '../components/PersonInfo';
 import profPic from '../assets/one-punch-man.jpg';
 
+export interface IPersonInfo {
+    img: StaticImageData;
+    name: string;
+    job: string;
+    email: string;
+    phone: number;
+    desc: string;
+  }
 export const personInfo: IPersonInfo = {
     img: profPic,
     name: 'Saitama',

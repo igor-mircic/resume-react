@@ -1,13 +1,5 @@
 import Image from "next/image";
-
-export interface IPersonInfo {
-  img: StaticImageData;
-  name: string;
-  job: string;
-  email: string;
-  phone: number;
-  desc: string;
-}
+import { IPersonInfo } from "../consts/personInfo";
 
 const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
   return (
