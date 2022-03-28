@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { IPersonInfo } from "../consts/personInfo";
 
 const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
   return (

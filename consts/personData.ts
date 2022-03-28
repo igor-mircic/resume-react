@@ -6,34 +6,6 @@ import vaccman from "../assets/vaccine-man.jpg";
 import marugori from "../assets/marugori.png";
 import profPic from "../assets/one-punch-man.jpg";
 
-// interfaces
-export interface IPersonInfo {
-  img: StaticImageData;
-  name: string;
-  job: string;
-  email: string;
-  phone: number;
-  desc: string;
-}
-export interface IHobbies {
-  img?: StaticImageData;
-  title: string;
-  desc: string;
-}
-export interface IExperience {
-  img?: StaticImageData;
-  dateStart: string;
-  dateEnd: string;
-  jobTitle: string;
-  jobDesc: string;
-}
-interface IData {
-  personInfo: IPersonInfo;
-  hobbies: IHobbies[];
-  experiences: IExperience[];
-}
-
-// data
 export const personData: IData = {
   personInfo: {
     img: profPic,

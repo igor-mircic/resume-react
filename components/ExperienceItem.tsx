@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { IExperience } from "../consts/experiences";
 
 const ExperienceItem = ({
   img,

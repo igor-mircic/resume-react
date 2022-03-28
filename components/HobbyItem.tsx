@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { IHobbies } from "../consts/hobbies";
 
 const HobbyItem = ({ img, title, desc }: IHobbies) => {
   return (

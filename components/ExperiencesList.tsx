@@ -1,9 +1,4 @@
 import ExperienceItem from "./ExperienceItem";
-import { IExperience } from "../consts/experiences";
-
-interface IExpProp {
-  experiences: IExperience[];
-}
 
 const ExperiencesList = (props: IExpProp) => {
   return (

@@ -1,9 +1,4 @@
 import HobbyItem from "./HobbyItem";
-import { IHobbies } from "../consts/hobbies";
-
-interface IHobbyProp {
-  hobbies: IHobbies[];
-}
 
 const HobbiesList = (props: IHobbyProp) => {
   return (
