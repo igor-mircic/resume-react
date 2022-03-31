@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
     return (
-        <div>
+        <div className={'rounded'}>
             <Image
                 src={img}
                 alt="profile picture"

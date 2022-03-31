@@ -2,7 +2,7 @@ import ExperienceItem from './ExperienceItem';
 
 const ExperiencesList = (props: IExpProp) => {
     return (
-        <div>
+        <div className={'rounded'}>
             <h1>Experiences</h1>
             {props.experiences.map(({ ...expItem }) => {
                 return (
