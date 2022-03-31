@@ -2,7 +2,7 @@ import ExperienceItem from './ExperienceItem';
 
 const ExperiencesList = (props: IExpProp) => {
     return (
-        <div>
+        <div className="container rounded">
             <h1>Experiences</h1>
             {props.experiences.map(({ ...expItem }) => {
                 return (
@@ -12,6 +12,13 @@ const ExperiencesList = (props: IExpProp) => {
                     ></ExperienceItem>
                 );
             })}
+            <style jsx>
+                {`
+                    .container {
+                        width: 430px;
+                    }
+                `}
+            </style>
         </div>
     );
 };

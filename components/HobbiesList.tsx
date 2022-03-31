@@ -1,14 +1,23 @@
-import HobbyItem from "./HobbyItem";
+import HobbyItem from './HobbyItem';
 
 const HobbiesList = (props: IHobbyProp) => {
-  return (
-    <div>
-      <h1>Hobbies</h1>
-      {props.hobbies.map(({ ...hobbyItem }) => {
-        return <HobbyItem {...hobbyItem} key={hobbyItem.title}></HobbyItem>;
-      })}
-    </div>
-  );
+    return (
+        <div className="container rounded">
+            <h1>Hobbies</h1>
+            {props.hobbies.map(({ ...hobbyItem }) => {
+                return (
+                    <HobbyItem {...hobbyItem} key={hobbyItem.title}></HobbyItem>
+                );
+            })}
+            <style jsx>
+                {`
+                    .container {
+                        width: 362px;
+                    }
+                `}
+            </style>
+        </div>
+    );
 };
 
 export default HobbiesList;
