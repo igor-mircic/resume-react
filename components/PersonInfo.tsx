@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
     return (
-        <div className={'rounded'}>
+        <div className={'rounded container'}>
             <Image
                 src={img}
                 alt="profile picture"
@@ -18,6 +18,17 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
                 <p>{phone}</p>
             </div>
             <p>{desc}</p>
+            <style jsx>
+                {`
+                    .container {
+                        width: 500px;
+                        height: 600px;
+                    }
+                    p {
+                        color: red;
+                    }
+                `}
+            </style>
         </div>
     );
 };

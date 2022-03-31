@@ -2,7 +2,7 @@ import HobbyItem from './HobbyItem';
 
 const HobbiesList = (props: IHobbyProp) => {
     return (
-        <div className={'rounded'}>
+        <div className="container rounded">
             <h1>Hobbies</h1>
             {props.hobbies.map(({ ...hobbyItem }) => {
                 return (
