@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { MdPhone, MdMail } from 'react-icons/md';
 
 const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
     return (
@@ -13,16 +14,61 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
             />
             <h1>{name}</h1>
             <p>{job}</p>
-            <div>
-                <p>{email}</p>
-                <p>{phone}</p>
+            <div className="subContainer">
+                <div className="flexContainer">
+                    <div>
+                        <MdMail size={26} />
+                    </div>
+                    <p>{email}</p>
+                </div>
+                <div className="flexContainer">
+                    <div>
+                        <MdPhone size={26} />
+                    </div>
+                    <p>{phone}</p>
+                </div>
             </div>
             <p>{desc}</p>
             <style jsx>
                 {`
                     .container {
-                        width: 430px;
+                        width: 460px;
+                        padding: 30px 30px 20px;
                     }
+                    p {
+                        margin-top: 0;
+                    }
+                    h1 {
+                        margin-bottom: 0;
+                        font-size: 40px;
+                    }
+                    .subContainer {
+                        padding: 5px 0 20px;
+                    }
+                    .subContainer p {
+                        color: var(--main-gray-font);
+                        margin-bottom: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .flexContainer {
+                        display: flex;
+                        padding: 0;
+                    }
+                    .flexContainer div {
+                        padding: 15px 15px 15px 0;
+                    }
+<<<<<<< HEAD
+                    .subContainer p {
+                        color: var(--main-gray-font);
+                        margin-bottom: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+=======
+>>>>>>> ac783bd... ...
                 `}
             </style>
         </div>

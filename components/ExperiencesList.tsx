@@ -15,7 +15,10 @@ const ExperiencesList = (props: IExpProp) => {
             <style jsx>
                 {`
                     .container {
-                        width: 430px;
+                        width: 650px;
+                    }
+                    h1 {
+                        margin-left: 20px;
                     }
                 `}
             </style>
