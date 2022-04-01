@@ -59,7 +59,6 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
                     .flexContainer div {
                         padding: 15px 15px 15px 0;
                     }
-<<<<<<< HEAD
                     .subContainer p {
                         color: var(--main-gray-font);
                         margin-bottom: 5px;
@@ -67,8 +66,6 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
                         align-items: center;
                         justify-content: center;
                     }
-=======
->>>>>>> ac783bd... ...
                 `}
             </style>
         </div>
