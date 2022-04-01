@@ -13,7 +13,7 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
             />
             <h1>{name}</h1>
             <p>{job}</p>
-            <div>
+            <div className="subContainer">
                 <p>{email}</p>
                 <p>{phone}</p>
             </div>
@@ -21,7 +21,18 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
             <style jsx>
                 {`
                     .container {
-                        width: 430px;
+                        width: 460px;
+                        padding: 30px 30px 20px;
+                    }
+                    p {
+                        margin-top: 0;
+                    }
+                    h1 {
+                        margin-bottom: 0;
+                        font-size: 40px;
+                    }
+                    .subContainer p {
+                        color: var(--main-gray-font);
                     }
                 `}
             </style>

@@ -14,6 +14,9 @@ const HobbiesList = (props: IHobbyProp) => {
                     .container {
                         width: 362px;
                     }
+                    h1 {
+                        margin-left: 20px;
+                    }
                 `}
             </style>
         </div>

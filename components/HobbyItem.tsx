@@ -12,6 +12,17 @@ const HobbyItem = ({ img, title, desc }: IHobbies) => {
             />
             <h3>{title}</h3>
             <p>{desc}</p>
+            <style jsx>
+                {`
+                    h3 {
+                        margin: 15px 0;
+                    }
+                    h3,
+                    p {
+                        margin-left: 15px;
+                    }
+                `}
+            </style>
         </div>
     );
 };
