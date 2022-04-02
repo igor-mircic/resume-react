@@ -7,9 +7,11 @@ import ExperiencesList from '../components/ExperiencesList';
 import HobbiesList from '../components/HobbiesList';
 // data
 import { personData } from '../consts/personData';
+import SkillsList from '../components/SkillsList';
 
 const Home: NextPage = () => {
     const { personInfo, experiences, hobbies } = personData;
+    const skillsArr: string[] = ['javascript', 'typescript', 'html5'];
     return (
         <div>
             <Head>
@@ -20,6 +22,7 @@ const Home: NextPage = () => {
 
             <main>
                 <PersonInfo {...personInfo}></PersonInfo>
+                <SkillsList array={skillsArr} />
                 <ExperiencesList {...{ experiences }}></ExperiencesList>
                 <HobbiesList {...{ hobbies }}></HobbiesList>
             </main>

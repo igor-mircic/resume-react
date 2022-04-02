@@ -5,6 +5,8 @@ import crablante from '../assets/crablante.jpg';
 import vaccman from '../assets/vaccine-man.jpg';
 import marugori from '../assets/marugori.png';
 import profPic from '../assets/one-punch-man.jpg';
+import * as Di from 'react-icons/di';
+import * as Si from 'react-icons/si';
 
 export const personData: IData = {
     personInfo: {
@@ -55,4 +57,20 @@ export const personData: IData = {
             desc: 'I punched Marugori, and his head exploded all over the place.',
         },
     ],
+};
+// const html = require('react-icons/di/DiHtml5');
+export const skills: object = {
+    html5: Di.DiHtml5,
+    bootstrap: Di.DiBootstrap,
+    javascript: Di.DiJavascript1,
+    typescript: Si.SiTypescript,
+    react: Si.SiReact,
+    redux: Si.SiRedux,
+    angular: Si.SiAngular,
+    css3: Si.SiCss3,
+    git: Di.DiGit,
+    sass: Di.DiSass,
+    nextjs: Si.SiNextdotjs,
+    styledcomponents: Si.SiStyledcomponents,
+    vue: Si.SiVuedotjs,
 };
