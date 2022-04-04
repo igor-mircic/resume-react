@@ -1,5 +1,5 @@
 import { IconType } from 'react-icons';
-import { skills } from '../consts/personData';
+import { skills } from '../consts/skills';
 import SkillItem from './SkillItem';
 
 interface IArray {
@@ -27,7 +27,12 @@ const SkillsList = (props: IProps) => {
             <style jsx>
                 {`
                     .container {
-                        width: 650px;
+                        height: 100%;
+                        max-width: 552px;
+                        justify-content: center;
+                        display: flex;
+                        flex: wrap;
+                        flex-wrap: wrap;
                     }
                     h1 {
                         margin-left: 20px;

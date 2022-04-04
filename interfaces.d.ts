@@ -22,6 +22,7 @@ interface IData {
     personInfo: IPersonInfo;
     hobbies: IHobbies[];
     experiences: IExperience[];
+    skills: string[];
 }
 interface IHobbyProp {
     hobbies: IHobbies[];

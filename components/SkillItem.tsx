@@ -8,7 +8,7 @@ interface ISkillItem {
 const SkillItem = ({ icon, skillName }: ISkillItem) => {
     const Icon = icon;
     return (
-        <div className="container">
+        <div className="container rounded">
             <div>
                 <Icon size={26} />
             </div>
@@ -17,6 +17,14 @@ const SkillItem = ({ icon, skillName }: ISkillItem) => {
                 {`
                     .container {
                         display: flex;
+                        background-color: var(--main-gray-bkg);
+                        flex: 0 0 150px;
+                        align-items: center;
+                        border: 5px solid var(--main-gray-bkg);
+                        padding: 0;
+                        height: 50px;
+                        width: 200px;
+                        margin: 1px;
                     }
                 `}
             </style>
