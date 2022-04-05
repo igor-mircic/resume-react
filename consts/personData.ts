@@ -63,5 +63,6 @@ export const personData: IData = {
         'nextjs',
         'git',
         'react',
+        'styledcomponents',
     ],
 };

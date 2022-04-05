@@ -37,6 +37,11 @@ const SkillsList = (props: IProps) => {
                     h1 {
                         margin-left: 20px;
                     }
+                    @media screen and (max-width: 767px) {
+                        .container {
+                            width: 100%;
+                        }
+                    }
                 `}
             </style>
         </div>

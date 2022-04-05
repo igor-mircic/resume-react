@@ -1,8 +1,36 @@
+/* CSS reset */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+ol,
+ul {
+    list-style: none;
+}
+img {
+    height: 100%;
+    width: 100%;
+}
+table {
+    border-collapse: collapse;
+}
+textarea {
+    white-space: revert;
+}
+/* ######### */
+
+/* variables */
 :root {
     --main-gray-bkg: #f2f2f2;
     --main-gray-font: #4f4f4f;
     --light-gray-font: #828282;
 }
+/* ######### */
 
 html,
 body {
@@ -16,6 +44,11 @@ body {
 }
 main {
     padding: 1vw 5vw 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 1200px;
+    padding: 0;
 }
 div {
     padding: 1em;
@@ -42,11 +75,13 @@ a {
     color: inherit;
     text-decoration: none;
 }
-
-* {
-    box-sizing: border-box;
+footer {
+    height: 50px;
+    margin-top: 50px;
 }
-
+footer p {
+    text-align: center;
+}
 img,
 .rounded {
     border-radius: 12px;
@@ -56,4 +91,21 @@ img,
     background-color: #ffffff;
     margin: 15px 15px;
     padding: 15px;
+    box-shadow: 0 15px 20px -15px;
+}
+
+@media screen and (max-width: 767px) {
+    div {
+        padding: 0;
+        margin: auto;
+        width: 90%;
+    }
+    .container {
+        margin-left: 0;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }

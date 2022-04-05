@@ -9,7 +9,7 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
                 alt="profile picture"
                 width={400}
                 height={300}
-                layout="fixed"
+                layout="responsive"
                 priority
             />
             <h1>{name}</h1>
@@ -65,6 +65,18 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                    }
+                    @media screen and (max-width: 767px) {
+                        .container {
+                            width: 100%;
+                        }
+                        .flexContainer div {
+                            flex: 0 1 50px;
+                        }
+                        .flexContainer p {
+                            flex: 1 1 500px;
+                            text-align: left;
+                        }
                     }
                 `}
             </style>

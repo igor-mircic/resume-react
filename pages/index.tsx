@@ -27,15 +27,15 @@ const Home: NextPage = () => {
                 <HobbiesList {...{ hobbies }}></HobbiesList>
             </main>
 
-            <footer></footer>
+            <footer>
+                <p>
+                    created by <span>{personInfo.name}</span> - devChallenges.io
+                </p>
+            </footer>
             <style jsx>
                 {`
-                    main {
-                        display: flex;
-                        flex-wrap: wrap;
-                        margin: auto;
-                        width: 1200px;
-                        padding: 0;
+                    span {
+                        color: var(--main-gray-font);
                     }
                 `}
             </style>

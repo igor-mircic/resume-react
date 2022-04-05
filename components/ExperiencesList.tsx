@@ -20,6 +20,12 @@ const ExperiencesList = (props: IExpProp) => {
                     h1 {
                         margin-left: 20px;
                     }
+                    @media screen and (max-width: 767px) {
+                        .container {
+                            width: 100%;
+                            padding-bottom: 30px;
+                        }
+                    }
                 `}
             </style>
         </div>

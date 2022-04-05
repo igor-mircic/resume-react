@@ -21,10 +21,14 @@ const SkillItem = ({ icon, skillName }: ISkillItem) => {
                         flex: 0 0 150px;
                         align-items: center;
                         border: 5px solid var(--main-gray-bkg);
-                        padding: 0;
+                        padding: 5px 12px 0;
                         height: 50px;
-                        width: 200px;
-                        margin: 1px;
+                        max-width: 300px;
+                        margin: 1.5px;
+                        box-shadow: 0 10px 15px -5px;
+                    }
+                    .container p {
+                        margin: 0 2px 5px 5px;
                     }
                 `}
             </style>
