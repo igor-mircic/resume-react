@@ -33,3 +33,10 @@ interface IExpProp {
 interface IArray {
     value: IExperience[] | IHobbies[];
 }
+interface ISkillItem {
+    icon: IconType;
+    skillName: string;
+}
+interface Iskills {
+    [key: string]: ISkillItem;
+}

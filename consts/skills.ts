@@ -1,18 +1,72 @@
-import * as Di from 'react-icons/di';
-import * as Si from 'react-icons/si';
+import {
+    DiBootstrap,
+    DiGit,
+    DiHtml5,
+    DiJavascript1,
+    DiSass,
+} from 'react-icons/di';
+import {
+    SiAngular,
+    SiCss3,
+    SiNextdotjs,
+    SiReact,
+    SiRedux,
+    SiStyledcomponents,
+    SiTypescript,
+    SiVuedotjs,
+} from 'react-icons/si';
 
-export const skills: object = {
-    html5: Di.DiHtml5,
-    bootstrap: Di.DiBootstrap,
-    javascript: Di.DiJavascript1,
-    typescript: Si.SiTypescript,
-    react: Si.SiReact,
-    redux: Si.SiRedux,
-    angular: Si.SiAngular,
-    css3: Si.SiCss3,
-    git: Di.DiGit,
-    sass: Di.DiSass,
-    nextjs: Si.SiNextdotjs,
-    styledcomponents: Si.SiStyledcomponents,
-    vue: Si.SiVuedotjs,
+export const skills: Iskills = {
+    html5: {
+        icon: DiHtml5,
+        skillName: 'HTML 5',
+    },
+    bootstrap: {
+        icon: DiBootstrap,
+        skillName: 'Bootstrap',
+    },
+    javascript: {
+        icon: DiJavascript1,
+        skillName: 'JavaScript',
+    },
+    typescript: {
+        icon: SiTypescript,
+        skillName: 'TypeScript',
+    },
+    react: {
+        icon: SiReact,
+        skillName: 'React',
+    },
+    redux: {
+        icon: SiRedux,
+        skillName: 'Redux',
+    },
+    angular: {
+        icon: SiAngular,
+        skillName: 'Angular',
+    },
+    css3: {
+        icon: SiCss3,
+        skillName: 'CSS 3',
+    },
+    git: {
+        icon: DiGit,
+        skillName: 'Git',
+    },
+    sass: {
+        icon: DiSass,
+        skillName: 'Sass',
+    },
+    nextjs: {
+        icon: SiNextdotjs,
+        skillName: 'Next.JS',
+    },
+    styledcomponents: {
+        icon: SiStyledcomponents,
+        skillName: 'Styled Components',
+    },
+    vue: {
+        icon: SiVuedotjs,
+        skillName: 'Vue.JS',
+    },
 };

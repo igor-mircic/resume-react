@@ -2,27 +2,26 @@ import { IconType } from 'react-icons';
 import { skills } from '../consts/skills';
 import SkillItem from './SkillItem';
 
-interface IArray {
-    name: string;
-    icon: IconType;
-}
 interface IProps {
     array: string[];
 }
 
 const SkillsList = (props: IProps) => {
-    const skillArray: IArray[] = props.array.map((skill) => {
-        for (const [key, value] of Object.entries(skills)) {
-            if (skill === key) {
-                return { name: key, icon: value };
-            }
-        }
-    }) as unknown as IArray[];
+    const skillArray: ISkillItem[] = props.array.map((skill) => {
+        const { skillName, icon } = skills[skill];
+        return { skillName, icon };
+    });
 
     return (
         <div className="container rounded">
-            {skillArray.map(({ name, icon }) => {
-                return <SkillItem skillName={name} icon={icon} key={name} />;
+            {skillArray.map(({ skillName, icon }) => {
+                return (
+                    <SkillItem
+                        skillName={skillName}
+                        icon={icon}
+                        key={skillName}
+                    />
+                );
             })}
             <style jsx>
                 {`
