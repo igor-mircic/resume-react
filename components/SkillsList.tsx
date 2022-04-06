@@ -1,4 +1,3 @@
-import { IconType } from 'react-icons';
 import { skills } from '../consts/skills';
 import SkillItem from './SkillItem';
 
@@ -13,7 +12,8 @@ const SkillsList = (props: IProps) => {
     });
 
     return (
-        <div className="container rounded">
+        <div className="container rounded skills">
+            <h1>Skills</h1>
             {skillArray.map(({ skillName, icon }) => {
                 return (
                     <SkillItem
@@ -27,16 +27,17 @@ const SkillsList = (props: IProps) => {
                 {`
                     .container {
                         height: 100%;
-                        max-width: 552px;
+                        max-width: 900px;
                         justify-content: center;
                         display: flex;
                         flex: wrap;
                         flex-wrap: wrap;
                     }
                     h1 {
-                        margin-left: 20px;
+                        margin: 0 0 15px 15px;
+                        flex: 1 0 100%;
                     }
-                    @media screen and (max-width: 767px) {
+                    @media screen and (max-width: 780px) {
                         .container {
                             width: 100%;
                         }

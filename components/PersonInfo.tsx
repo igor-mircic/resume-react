@@ -3,7 +3,7 @@ import { MdPhone, MdMail } from 'react-icons/md';
 
 const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
     return (
-        <div className={'rounded container'}>
+        <div className={'rounded container person'}>
             <Image
                 src={img}
                 alt="profile picture"
@@ -16,66 +16,54 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
             <p>{job}</p>
             <div className="subContainer">
                 <div className="flexContainer">
-                    <div>
-                        <MdMail size={26} />
-                    </div>
+                    <MdMail size={26} />
                     <p>{email}</p>
                 </div>
                 <div className="flexContainer">
-                    <div>
-                        <MdPhone size={26} />
-                    </div>
+                    <MdPhone size={26} />
                     <p>{phone}</p>
                 </div>
             </div>
-            <p>{desc}</p>
+            <p className="desc">{desc}</p>
             <style jsx>
                 {`
                     .container {
-                        width: 460px;
-                        padding: 30px 30px 20px;
-                    }
-                    p {
-                        margin-top: 0;
+                        width: 413px;
+                        padding: 30px;
                     }
                     h1 {
-                        margin-bottom: 0;
+                        margin: 30px 0 0;
                         font-size: 40px;
                     }
                     .subContainer {
-                        padding: 5px 0 20px;
+                        margin: 30px 0 16px;
+                        padding-left: 0;
                     }
                     .subContainer p {
                         color: var(--main-gray-font);
                         margin-bottom: 5px;
                         display: flex;
-                        align-items: center;
-                        justify-content: center;
                     }
                     .flexContainer {
                         display: flex;
                         padding: 0;
                     }
-                    .flexContainer div {
-                        padding: 15px 15px 15px 0;
-                    }
                     .subContainer p {
                         color: var(--main-gray-font);
-                        margin-bottom: 5px;
+                        margin-bottom: 15px;
                         display: flex;
-                        align-items: center;
-                        justify-content: center;
+                        margin-left: 20px;
                     }
-                    @media screen and (max-width: 767px) {
+                    .desc {
+                        margin: 0 0 10px;
+                    }
+                    @media screen and (max-width: 780px) {
                         .container {
                             width: 100%;
                         }
-                        .flexContainer div {
-                            flex: 0 1 50px;
-                        }
                         .flexContainer p {
-                            flex: 1 1 500px;
                             text-align: left;
+                            overflow-wrap: anywhere;
                         }
                     }
                 `}
