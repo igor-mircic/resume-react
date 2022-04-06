@@ -24,9 +24,9 @@ const HobbyItem = ({ img, title, desc }: IHobbies) => {
                     p {
                         margin-left: 15px;
                     }
-                    @media screen and (max-width: 767px) {
+                    @media screen and (max-width: 780px) {
                         .hobby .image {
-                            margin: 30px 0 0 15px;
+                            margin: 30px 0 0;
                         }
                         h3,
                         p {

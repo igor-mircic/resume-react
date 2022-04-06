@@ -32,29 +32,28 @@ const ExperienceItem = ({
                     .container {
                         display: flex;
                         box-shadow: none;
+                        padding: 0;
+                        margin: 0 0 15px;
                     }
                     .image {
-                        width: 200px;
-                        height: 200px;
                         padding: 0;
-                        flex: 1 0 200px;
+                        flex: 0 0 100px;
+                        margin: 20px 20px 0;
                     }
-                    p:first-child {
-                        margin-top: 0;
+                    h3 {
+                        margin: 15px 0;
                     }
-                    .subContainer {
-                        padding: 0 0 15px 25px;
-                    }
-                    .subContainer p {
-                        padding: 20px 0;
-                    }
-                    @media screen and (max-width: 767px) {
+                    @media screen and (max-width: 780px) {
                         .image {
-                            margin: 30px 10px 0 15px;
-                            flex: 0 1 200px;
+                            flex: 0 1 100px;
+                            margin-bottom: 10px;
                         }
-                        .experience {
-                            height: 250px;
+                        .container {
+                            flex-direction: column;
+                        }
+                        .subContainer {
+                            flex: 1 1 100px;
+                            padding: 0 30px;
                         }
                         h3,
                         p {
@@ -67,7 +66,6 @@ const ExperienceItem = ({
                         p:first-child {
                             font-size: 0.8em;
                             margin-bottom: 15px;
-                            text-align: left;
                         }
                         p:last-child {
                             margin-top: 20px;

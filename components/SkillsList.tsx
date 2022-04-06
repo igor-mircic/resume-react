@@ -13,7 +13,7 @@ const SkillsList = (props: IProps) => {
     });
 
     return (
-        <div className="container rounded">
+        <div className="container rounded skills">
             {skillArray.map(({ skillName, icon }) => {
                 return (
                     <SkillItem
@@ -27,7 +27,7 @@ const SkillsList = (props: IProps) => {
                 {`
                     .container {
                         height: 100%;
-                        max-width: 552px;
+                        max-width: 900px;
                         justify-content: center;
                         display: flex;
                         flex: wrap;

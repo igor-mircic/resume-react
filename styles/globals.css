@@ -43,12 +43,26 @@ body {
         sans-serif;
 }
 main {
-    padding: 1vw 5vw 0;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
     margin: auto;
-    width: 1200px;
+    width: 100%;
+    max-width: 1400px;
     padding: 0;
+}
+.person {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.experiences {
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+.hobbies {
+    grid-row-start: 9;
+    grid-row-end: 11;
 }
 div {
     padding: 1em;
@@ -89,17 +103,11 @@ img,
 
 .container {
     background-color: #ffffff;
-    margin: 15px 15px;
     padding: 15px;
     box-shadow: 0 15px 20px -15px;
 }
 
 @media screen and (max-width: 767px) {
-    div {
-        padding: 0;
-        margin: auto;
-        width: 90%;
-    }
     .container {
         margin-left: 0;
     }

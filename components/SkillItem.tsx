@@ -14,6 +14,7 @@ const SkillItem = ({ icon, skillName }: ISkillItem) => {
                         flex: 1 1;
                         align-items: center;
                         border: 5px solid var(--main-gray-bkg);
+                        border-radius: 25px;
                         padding: 5px 12px 0;
                         height: 50px;
                         max-width: 250px;

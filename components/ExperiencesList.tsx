@@ -2,7 +2,7 @@ import ExperienceItem from './ExperienceItem';
 
 const ExperiencesList = (props: IExpProp) => {
     return (
-        <div className="container rounded">
+        <div className="container rounded experiences">
             <h1>Experiences</h1>
             {props.experiences.map(({ ...expItem }) => {
                 return (
@@ -15,12 +15,12 @@ const ExperiencesList = (props: IExpProp) => {
             <style jsx>
                 {`
                     .container {
-                        width: 650px;
+                        width: 413px;
                     }
                     h1 {
-                        margin-left: 20px;
+                        margin: 0 0 20px 10px;
                     }
-                    @media screen and (max-width: 767px) {
+                    @media screen and (max-width: 780px) {
                         .container {
                             width: 100%;
                             padding-bottom: 30px;

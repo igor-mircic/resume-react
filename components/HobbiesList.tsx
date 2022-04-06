@@ -2,7 +2,7 @@ import HobbyItem from './HobbyItem';
 
 const HobbiesList = (props: IHobbyProp) => {
     return (
-        <div className="container rounded">
+        <div className="container rounded hobbies">
             <h1>Hobbies</h1>
             {props.hobbies.map(({ ...hobbyItem }) => {
                 return (
@@ -12,13 +12,13 @@ const HobbiesList = (props: IHobbyProp) => {
             <style jsx>
                 {`
                     .container {
-                        width: 362px;
+                        width: 413px;
                         padding-bottom: 40px;
                     }
                     h1 {
-                        margin-left: 20px;
+                        margin-left: 10px;
                     }
-                    @media screen and (max-width: 767px) {
+                    @media screen and (max-width: 780px) {
                         .container {
                             width: 100%;
                         }
