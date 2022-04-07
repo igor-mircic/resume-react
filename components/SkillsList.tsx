@@ -1,4 +1,3 @@
-import { IconType } from 'react-icons';
 import { skills } from '../consts/skills';
 import SkillItem from './SkillItem';
 

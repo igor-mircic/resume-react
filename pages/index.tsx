@@ -6,10 +6,13 @@ import PersonInfo from '../components/PersonInfo';
 import ExperiencesList from '../components/ExperiencesList';
 import HobbiesList from '../components/HobbiesList';
 // data
-import { personData } from '../consts/personData';
+import { SaitamaData } from '../consts/SaitamaData';
 import SkillsList from '../components/SkillsList';
+import { useState } from 'react';
 
 const Home: NextPage = () => {
+    const [currentUser, setCurrentUser] = useState();
+
     const { personInfo, experiences, hobbies, skills } = personData;
 
     return (
