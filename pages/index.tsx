@@ -8,13 +8,9 @@ import ExperiencesList from '../components/ExperiencesList';
 import HobbiesList from '../components/HobbiesList';
 import SkillsList from '../components/SkillsList';
 // data
-<<<<<<< HEAD
 import { SaitamaData } from '../consts/SaitamaData';
 import { MladenData } from '../consts/MladenData';
 import UserList from '../components/UserList';
-=======
-import { personData } from '../consts/personData';
->>>>>>> style2
 
 const Home: NextPage = () => {
     const [currentUser, setCurrentUser] = useState(SaitamaData);
