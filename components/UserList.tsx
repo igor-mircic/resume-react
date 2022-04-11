@@ -5,19 +5,32 @@ const toggleMenu = () => {
 };
 
 interface Iprops {
-    name: string;
-    func: any;
+    onClick: any;
 }
 
-const UserList = ({ name, func }: Iprops) => {
+// const changeUser = (e: Event, props: Iprops) => {
+//     return props.onClick((e.target as HTMLElement)?.dataset?.value);
+// };
+
+const UserList = ({ onClick }: Iprops) => {
     return (
         <div className="container dropdown">
             <button onClick={toggleMenu}>Users</button>
             <div className="container menu">
-                <p onClick={func} data-value="saitama">
+                <p
+                    onClick={(e) =>
+                        onClick((e.target as HTMLElement)?.dataset?.value)
+                    }
+                    data-value="saitama"
+                >
                     Saitama
                 </p>
-                <p onClick={func} data-value="mladen">
+                <p
+                    onClick={(e) =>
+                        onClick((e.target as HTMLElement)?.dataset?.value)
+                    }
+                    data-value="mladen"
+                >
                     Mladen Stankovic
                 </p>
                 {/* <p onClick={func()}>Igor Mircic</p> */}

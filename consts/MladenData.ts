@@ -63,5 +63,6 @@ export const MladenData: IData = {
         'nextjs',
         'git',
         'react',
+        'vsc',
     ],
 };

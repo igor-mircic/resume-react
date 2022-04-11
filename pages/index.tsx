@@ -7,27 +7,21 @@ import PersonInfo from '../components/PersonInfo';
 import ExperiencesList from '../components/ExperiencesList';
 import HobbiesList from '../components/HobbiesList';
 import SkillsList from '../components/SkillsList';
+import UserList from '../components/UserList';
 // data
 import { SaitamaData } from '../consts/SaitamaData';
 import { MladenData } from '../consts/MladenData';
-import UserList from '../components/UserList';
+
+interface IAllData {
+    [key: string]: IData;
+}
+const allData: IAllData = {
+    saitama: SaitamaData,
+    mladen: MladenData,
+};
 
 const Home: NextPage = () => {
     const [currentUser, setCurrentUser] = useState(SaitamaData);
-    // const [name, setName] = useState(currentUser.personInfo.name);
-    // const changeName = (e: React.MouseEvent<HTMLButtonElement>) => {
-    //     setName(currentUser.personInfo.name);
-    // }
-    const func = (e: React.MouseEvent<HTMLElement>) => {
-        switch (e.currentTarget.dataset.value) {
-            case 'saitama':
-                setCurrentUser((currentUser) => SaitamaData);
-                break;
-            case 'mladen':
-                setCurrentUser((currentUser) => MladenData);
-                break;
-        }
-    };
     const { personInfo, experiences, hobbies, skills } = currentUser;
 
     return (
@@ -39,7 +33,9 @@ const Home: NextPage = () => {
             </Head>
 
             <main>
-                <UserList name={currentUser.personInfo.name} func={func} />
+                <UserList
+                    onClick={(value: string) => setCurrentUser(allData[value])}
+                />
                 <PersonInfo {...personInfo}></PersonInfo>
                 <SkillsList array={skills} />
                 <ExperiencesList {...{ experiences }}></ExperiencesList>
