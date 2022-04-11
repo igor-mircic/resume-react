@@ -33,7 +33,7 @@ const ExperienceItem = ({
                         display: flex;
                         box-shadow: none;
                         padding: 0;
-                        margin: 0 0 15px;
+                        margin: 0 0 20px;
                     }
                     .image {
                         padding: 0;
@@ -43,17 +43,20 @@ const ExperienceItem = ({
                     h3 {
                         margin: 15px 0;
                     }
+                    p:first-child {
+                        font-size: 0.8em;
+                        margin-bottom: 15px;
+                    }
                     @media screen and (max-width: 780px) {
                         .image {
-                            flex: 0 1 100px;
-                            margin-bottom: 10px;
-                        }
-                        .container {
-                            flex-direction: column;
+                            max-width: 100px;
                         }
                         .subContainer {
                             flex: 1 1 100px;
                             padding: 0 30px;
+                        }
+                        .container {
+                            flex-direction: auto;
                         }
                         h3,
                         p {
@@ -62,10 +65,6 @@ const ExperienceItem = ({
                         }
                         p {
                             font-size: 1em;
-                        }
-                        p:first-child {
-                            font-size: 0.8em;
-                            margin-bottom: 15px;
                         }
                         p:last-child {
                             margin-top: 20px;

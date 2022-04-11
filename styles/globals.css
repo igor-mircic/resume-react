@@ -107,7 +107,7 @@ img,
     box-shadow: 0 15px 20px -15px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 780px) {
     .container {
         margin-left: 0;
     }

@@ -8,9 +8,13 @@ import ExperiencesList from '../components/ExperiencesList';
 import HobbiesList from '../components/HobbiesList';
 import SkillsList from '../components/SkillsList';
 // data
+<<<<<<< HEAD
 import { SaitamaData } from '../consts/SaitamaData';
 import { MladenData } from '../consts/MladenData';
 import UserList from '../components/UserList';
+=======
+import { personData } from '../consts/personData';
+>>>>>>> style2
 
 const Home: NextPage = () => {
     const [currentUser, setCurrentUser] = useState(SaitamaData);
@@ -31,7 +35,7 @@ const Home: NextPage = () => {
     const { personInfo, experiences, hobbies, skills } = currentUser;
 
     return (
-        <div>
+        <div className="layout">
             <Head>
                 <title>{currentUser.personInfo.name}&apos;s resume</title>
                 <meta name="description" content="Resume webpage" />
@@ -55,6 +59,14 @@ const Home: NextPage = () => {
                 {`
                     span {
                         color: var(--main-gray-font);
+                    }
+                    @media screen and (max-width: 780px) {
+                        .layout {
+                            max-width: 500px;
+                            display: flex;
+                            flex-direction: column;
+                            margin: 0 auto;
+                        }
                     }
                 `}
             </style>

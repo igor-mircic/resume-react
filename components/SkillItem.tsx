@@ -1,5 +1,3 @@
-import { IconType } from 'react-icons';
-
 const SkillItem = ({ icon, skillName }: ISkillItem) => {
     const Icon = icon;
     return (
@@ -11,7 +9,7 @@ const SkillItem = ({ icon, skillName }: ISkillItem) => {
                     .container {
                         display: flex;
                         background-color: var(--main-gray-bkg);
-                        flex: 1 1;
+                        flex: 0 0;
                         align-items: center;
                         border: 5px solid var(--main-gray-bkg);
                         border-radius: 25px;
@@ -24,6 +22,7 @@ const SkillItem = ({ icon, skillName }: ISkillItem) => {
                     .container p {
                         margin: 0 2px 5px 5px;
                         text-align: center;
+                        white-space: nowrap;
                     }
                     .icon {
                         margin-right: 10px;

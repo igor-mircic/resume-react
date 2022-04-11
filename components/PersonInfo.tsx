@@ -37,6 +37,7 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
                     }
                     .subContainer {
                         margin: 30px 0 16px;
+                        padding-left: 0;
                     }
                     .subContainer p {
                         color: var(--main-gray-font);
@@ -46,9 +47,6 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
                     .flexContainer {
                         display: flex;
                         padding: 0;
-                    }
-                    .flexContainer div {
-                        padding: 15px 15px 15px 0;
                     }
                     .subContainer p {
                         color: var(--main-gray-font);
