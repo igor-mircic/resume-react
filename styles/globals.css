@@ -26,6 +26,8 @@ textarea {
 
 /* variables */
 :root {
+    --main-blue: #2f80ed;
+    --light-blue: #91c7ed;
     --main-gray-bkg: #f2f2f2;
     --main-gray-font: #4f4f4f;
     --light-gray-font: #828282;

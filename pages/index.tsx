@@ -6,11 +6,12 @@ import PersonInfo from '../components/PersonInfo';
 import ExperiencesList from '../components/ExperiencesList';
 import HobbiesList from '../components/HobbiesList';
 import SkillsList from '../components/SkillsList';
+import ProjectsList from '../components/ProjectsList';
 // data
 import { personData } from '../consts/personData';
 
 const Home: NextPage = () => {
-    const { personInfo, experiences, hobbies, skills } = personData;
+    const { personInfo, experiences, hobbies, skills, projects } = personData;
 
     return (
         <div className="layout">
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
             <main>
                 <PersonInfo {...personInfo}></PersonInfo>
                 <SkillsList array={skills} />
+                <ProjectsList {...{ projects }} />
                 <ExperiencesList {...{ experiences }}></ExperiencesList>
                 <HobbiesList {...{ hobbies }}></HobbiesList>
             </main>

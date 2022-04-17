@@ -1,10 +1,10 @@
 import ExperienceItem from './ExperienceItem';
 
-const ExperiencesList = (props: IExpProp) => {
+const ExperiencesList = ({ experiences }: IExpProp) => {
     return (
         <div className="container rounded experiences">
             <h1>Experiences</h1>
-            {props.experiences.map(({ ...expItem }) => {
+            {experiences.map(({ ...expItem }) => {
                 return (
                     <ExperienceItem
                         {...expItem}

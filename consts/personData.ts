@@ -5,6 +5,7 @@ import crablante from '../assets/crablante.jpg';
 import vaccman from '../assets/vaccine-man.jpg';
 import marugori from '../assets/marugori.png';
 import profPic from '../assets/one-punch-man.jpg';
+import project1 from '../assets/saitama-website.png';
 
 export const personData: IData = {
     personInfo: {
@@ -64,5 +65,15 @@ export const personData: IData = {
         'git',
         'react',
         'styledcomponents',
+    ],
+    projects: [
+        {
+            img: project1,
+            tags: '#CSS #HTML #responsive #React #TypeScript',
+            title: 'Resume page',
+            desc: "This project is a portfolio and resume page in one. The technologies I've used include CSS, HTML, TypeScript, NextJS, StyledJSX, etc.",
+            demoLink: 'https://www.google.com/',
+            codeLink: 'https://github.com/igor-mircic/resume',
+        },
     ],
 };

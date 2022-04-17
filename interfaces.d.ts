@@ -11,24 +11,30 @@ interface IHobbies {
     title: string;
     desc: string;
 }
-interface IExperience {
-    img?: StaticImageData;
+interface IExperience extends IHobbies {
     dateStart: string;
     dateEnd: string;
-    title: string;
-    desc: string;
+}
+interface IProject extends IHobbies {
+    tags: string;
+    demoLink: string;
+    codeLink?: string;
 }
 interface IData {
     personInfo: IPersonInfo;
     hobbies: IHobbies[];
     experiences: IExperience[];
     skills: string[];
+    projects: IProject[];
 }
 interface IHobbyProp {
     hobbies: IHobbies[];
 }
 interface IExpProp {
     experiences: IExperience[];
+}
+interface IProjectsProp {
+    projects: IProject[];
 }
 interface IArray {
     value: IExperience[] | IHobbies[];
