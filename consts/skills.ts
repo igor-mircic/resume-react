@@ -13,6 +13,7 @@ import {
     SiRedux,
     SiStyledcomponents,
     SiTypescript,
+    SiVisualstudiocode,
     SiVuedotjs,
 } from 'react-icons/si';
 
@@ -68,5 +69,9 @@ export const skills: Iskills = {
     vue: {
         icon: SiVuedotjs,
         skillName: 'Vue.JS',
+    },
+    vsc: {
+        icon: SiVisualstudiocode,
+        skillName: 'Visual Studio Code',
     },
 };

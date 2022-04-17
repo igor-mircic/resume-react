@@ -21,7 +21,7 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
                 </div>
                 <div className="flexContainer">
                     <MdPhone size={26} />
-                    <p>{phone}</p>
+                    <p>+{phone}</p>
                 </div>
             </div>
             <p className="desc">{desc}</p>

@@ -8,15 +8,15 @@ import HobbiesList from '../components/HobbiesList';
 import SkillsList from '../components/SkillsList';
 import ProjectsList from '../components/ProjectsList';
 // data
-import { personData } from '../consts/personData';
+import { MladenData } from '../consts/MladenData';
 
 const Home: NextPage = () => {
-    const { personInfo, experiences, hobbies, skills, projects } = personData;
+    const { personInfo, experiences, hobbies, skills, projects } = MladenData;
 
     return (
         <div className="layout">
             <Head>
-                <title>{personData.personInfo.name}&apos;s resume</title>
+                <title>{MladenData.personInfo.name}&apos;s resume</title>
                 <meta name="description" content="Resume webpage" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
