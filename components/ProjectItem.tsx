@@ -15,7 +15,7 @@ const ProjectItem = ({
                     src={img ? img : ''}
                     alt="brand image"
                     width={200}
-                    height={200}
+                    height={220}
                     layout="fixed"
                 />
             </div>

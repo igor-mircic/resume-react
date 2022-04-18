@@ -6,7 +6,7 @@ import engoo from '../assets/engoo-thumbnail.jpeg';
 import acadsoc from '../assets/acadsoc-thumbnail.jpeg';
 import haowj from '../assets/haowj-thumbnail.png';
 import profPic from '../assets/mladen-profile-pic.jpg';
-import project1 from '../assets/saitama-website.png';
+import project1 from '../assets/mladen-website.png';
 
 export const MladenData: IData = {
     personInfo: {
@@ -79,7 +79,7 @@ export const MladenData: IData = {
             tags: '#CSS #HTML #responsive #React #TypeScript',
             title: 'Resume page',
             desc: "This project is a portfolio and resume page in one. The technologies I've used include CSS, HTML, TypeScript, NextJS, StyledJSX, etc.",
-            demoLink: 'https://resume-cicd.vercel.app/',
+            demoLink: 'https://resume-cicd-5hrc2asao-mladen-s.vercel.app/',
             codeLink: 'https://github.com/igor-mircic/resume',
         },
     ],
