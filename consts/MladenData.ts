@@ -1,10 +1,11 @@
-import food from '../assets/food.jpg';
-import walk from '../assets/Take-A-Walk.jpg';
-import tv from '../assets/watching-tv.jpg';
-import crablante from '../assets/crablante.jpg';
-import vaccman from '../assets/vaccine-man.jpg';
-import marugori from '../assets/marugori.png';
-import profPic from '../assets/Maki LoL Avatar.jpeg';
+import hiking from '../assets/hiking-pexels-andrei-tanase-1271619.jpg';
+import gaming from '../assets/gaming-sam-pak-X6QffKLwyoQ-unsplash.jpg';
+import scifi from '../assets/scifi-aideal-hwa-OYzbqk2y26c-unsplash.jpg';
+import nr3d from '../assets/3d-javier-miranda-MrWOCGKFVDg-unsplash.jpg';
+import engoo from '../assets/engoo-thumbnail.jpeg';
+import acadsoc from '../assets/acadsoc-thumbnail.jpeg';
+import haowj from '../assets/haowj-thumbnail.png';
+import profPic from '../assets/mladen-profile-pic.jpg';
 import project1 from '../assets/saitama-website.png';
 
 export const MladenData: IData = {
@@ -18,42 +19,48 @@ export const MladenData: IData = {
     },
     hobbies: [
         {
-            img: food,
-            title: 'Eating',
-            desc: 'My favorite hobby is trying new kinds of food.',
+            img: hiking,
+            title: 'Hiking',
+            desc: "I'm an outdoorsy person, and very much enjoy hiking, camping, etc.",
+        },
+
+        {
+            img: scifi,
+            title: 'Science Fiction',
+            desc: 'Science fiction is my favorite genre. I enjoy watching tv shows, reading books, playing video games - anything related to sci-fi.',
         },
         {
-            img: walk,
-            title: 'Going out for a walk',
-            desc: 'I often go out for a stroll around the block. Sometimes it leads to a job.',
+            img: gaming,
+            title: 'Gaming',
+            desc: 'Playing video games, but also board games, is one of my favorite pastimes.',
         },
         {
-            img: tv,
-            title: 'Watching television',
-            desc: 'I do not have a computer.',
+            img: nr3d,
+            title: '3D sculpting and modeling',
+            desc: "My newest hobby is 3D sculpting/modeling. It's an amazing way for me to express my creativity.",
         },
     ],
     experiences: [
         {
-            img: vaccman,
-            dateStart: 'Season 1, Episode 1',
-            dateEnd: 'Season 1, Episode 1',
-            title: 'Vaccine Man',
-            desc: 'I punched Vaccine Man, and he burst all over the place.',
+            img: haowj,
+            dateStart: 'September 2020',
+            dateEnd: 'August 2021',
+            title: 'HAOWJ',
+            desc: "I've worked in Haowj as an 'online english teacher'. This was my last teaching position, after which I had decided to pursue a career in web development.",
         },
         {
-            img: crablante,
-            dateStart: 'Season 1, Episode 1',
-            dateEnd: 'Season 1, Episode 1',
-            title: 'Crablante',
-            desc: 'I slapped Crablante, and he splattered all over the wall.',
+            img: acadsoc,
+            dateStart: 'January 2019',
+            dateEnd: 'July 2020',
+            title: 'Acadsoc',
+            desc: "I've worked in Acadsoc as an 'online english teacher'.",
         },
         {
-            img: marugori,
-            dateStart: 'Season 1, Episode 2',
-            dateEnd: 'Season 1, Episode 2',
-            title: 'Marugori',
-            desc: 'I punched Marugori, and his head exploded all over the place.',
+            img: engoo,
+            dateStart: 'July 2017',
+            dateEnd: 'October 2018',
+            title: 'Engoo',
+            desc: "I've worked in Acadsoc as an 'online english teacher'. This was my first official teaching position.",
         },
     ],
     skills: [

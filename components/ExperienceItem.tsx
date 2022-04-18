@@ -33,7 +33,7 @@ const ExperienceItem = ({
                         display: flex;
                         box-shadow: none;
                         padding: 0;
-                        margin: 0 0 20px;
+                        margin: 0 0 30px;
                     }
                     .image {
                         padding: 0;

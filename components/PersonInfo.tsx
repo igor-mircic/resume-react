@@ -7,7 +7,7 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
             <Image
                 src={img}
                 alt="profile picture"
-                width={400}
+                width={300}
                 height={300}
                 layout="responsive"
                 priority
