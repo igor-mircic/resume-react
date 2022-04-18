@@ -79,7 +79,7 @@ export const MladenData: IData = {
             tags: '#CSS #HTML #responsive #React #TypeScript',
             title: 'Resume page',
             desc: "This project is a portfolio and resume page in one. The technologies I've used include CSS, HTML, TypeScript, NextJS, StyledJSX, etc.",
-            demoLink: 'https://resume-cicd-5hrc2asao-mladen-s.vercel.app/',
+            demoLink: 'https://resume-cicd-zkuibaxuy-mladen-s.vercel.app/',
             codeLink: 'https://github.com/igor-mircic/resume',
         },
     ],
