@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Button from './Button';
+import LinkButton from './LinkButton';
 
 const ProjectItem = ({
     img,
@@ -26,12 +26,12 @@ const ProjectItem = ({
                 <h3 className="title">{title}</h3>
                 <p>{desc}</p>
                 <div className="linkContainer">
-                    <Button className="demo btn" link={demoLink}>
+                    <LinkButton className="demo btn" link={demoLink}>
                         Demo
-                    </Button>
-                    <Button className="code btn" link={codeLink}>
+                    </LinkButton>
+                    <LinkButton className="code btn" link={codeLink}>
                         Code
-                    </Button>
+                    </LinkButton>
                 </div>
             </div>
             <style jsx>

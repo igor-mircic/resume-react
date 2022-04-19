@@ -6,7 +6,7 @@ interface IButton {
     children: ReactChild;
 }
 
-const Button = ({ link, className, children }: IButton) => {
+const LinkButton = ({ link, className, children }: IButton) => {
     return (
         <a href={link} target="_blank" rel="noreferrer" className={className}>
             {children}
@@ -14,4 +14,4 @@ const Button = ({ link, className, children }: IButton) => {
     );
 };
 
-export default Button;
+export default LinkButton;
