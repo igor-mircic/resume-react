@@ -39,21 +39,16 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
                         margin: 30px 0 16px;
                         padding-left: 0;
                     }
-                    .subContainer p {
+                    .flexContainer p {
                         color: var(--main-gray-font);
-                        margin-bottom: 5px;
+                        margin: 0 0 15px 20px;
                         display: flex;
                     }
                     .flexContainer {
                         display: flex;
                         padding: 0;
                     }
-                    .subContainer p {
-                        color: var(--main-gray-font);
-                        margin-bottom: 15px;
-                        display: flex;
-                        margin-left: 20px;
-                    }
+
                     .desc {
                         margin: 0 0 10px;
                     }
@@ -65,6 +60,11 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
                         .flexContainer p {
                             text-align: left;
                             overflow-wrap: anywhere;
+                        }
+                    }
+                    @media screen and (max-width: 480px) {
+                        .flexContainer p {
+                            font-size: 4vw;
                         }
                     }
                 `}
