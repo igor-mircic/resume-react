@@ -70,6 +70,15 @@ const ExperienceItem = ({
                             margin-top: 20px;
                         }
                     }
+                    @media screen and (max-width: 470px) {
+                        .container {
+                            flex-direction: column;
+                        }
+                        .image {
+                            margin: auto;
+                            min-width: 100px;
+                        }
+                    }
                 `}
             </style>
         </div>
