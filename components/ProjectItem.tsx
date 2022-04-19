@@ -92,15 +92,21 @@ const ProjectItem = ({
                         border-radius: 12px;
                         margin-top: 30px;
                     }
-                    @media screen and (max-width: 780px) {
+                    @media screen and (max-width: 1080px) {
                         .container {
                             flex-direction: column;
+                            width: 100%;
                         }
                         .image {
                             margin: auto;
                         }
                         .linkContainer {
                             justify-content: center;
+                        }
+                        .code,
+                        .demo {
+                            width: 30%;
+                            height: 30%;
                         }
                     }
                 `}
