@@ -22,6 +22,11 @@ const ProjectsList = ({ projects }: IProjectsProp) => {
                         margin: 0;
                         padding: 0;
                     }
+                    @media screen and (max-width: 780px) {
+                        .container {
+                            width: 100%;
+                        }
+                    }
                 `}
             </style>
         </div>

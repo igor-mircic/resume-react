@@ -113,6 +113,23 @@ img,
     box-shadow: 0 15px 20px -15px;
 }
 
+@media screen and (max-width: 1080px) {
+    .experiences {
+        grid-column-start: 1;
+        grid-row-start: 3;
+    }
+    .hobbies {
+        grid-column-start: 1;
+    }
+    .projects {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-row-end: 7;
+    }
+    .skills {
+        grid-column-start: 2;
+    }
+}
 @media screen and (max-width: 780px) {
     .container {
         margin-left: 0;

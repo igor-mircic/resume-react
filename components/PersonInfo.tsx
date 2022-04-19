@@ -57,6 +57,7 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
                     .desc {
                         margin: 0 0 10px;
                     }
+
                     @media screen and (max-width: 780px) {
                         .container {
                             width: 100%;
