@@ -18,7 +18,7 @@ interface IExperience extends IHobbies {
 interface IProject extends IHobbies {
     tags: string;
     demoLink: string;
-    codeLink?: string;
+    codeLink: string;
 }
 interface IData {
     personInfo: IPersonInfo;
