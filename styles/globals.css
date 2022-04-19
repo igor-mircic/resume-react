@@ -113,6 +113,32 @@ img,
     box-shadow: 0 15px 20px -15px;
 }
 
+/* buttons */
+.code,
+.demo {
+    width: 136px;
+    height: 46px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    padding: inherit;
+}
+.btn:hover {
+    background-color: var(--light-blue);
+    cursor: pointer;
+}
+.demo {
+    background-color: var(--main-blue);
+    color: white;
+    margin-right: 10px;
+}
+.code {
+    color: var(--main-blue);
+    border: 1px solid var(--main-blue);
+}
+
+/* Media Queries */
 @media screen and (max-width: 1080px) {
     .experiences {
         grid-column-start: 1;
@@ -128,6 +154,11 @@ img,
     }
     .skills {
         grid-column-start: 2;
+    }
+    .code,
+    .demo {
+        width: 30%;
+        height: 30%;
     }
 }
 @media screen and (max-width: 780px) {

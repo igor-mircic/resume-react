@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Button from './Button';
 
 const ProjectItem = ({
     img,
@@ -25,22 +26,12 @@ const ProjectItem = ({
                 <h3 className="title">{title}</h3>
                 <p>{desc}</p>
                 <div className="linkContainer">
-                    <a
-                        href={demoLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="demo"
-                    >
+                    <Button className="demo btn" link={demoLink}>
                         Demo
-                    </a>
-                    <a
-                        href={codeLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="code"
-                    >
+                    </Button>
+                    <Button className="code btn" link={codeLink}>
                         Code
-                    </a>
+                    </Button>
                 </div>
             </div>
             <style jsx>
@@ -64,30 +55,7 @@ const ProjectItem = ({
                     .tags {
                         margin: 15px 0 35px;
                     }
-                    .code,
-                    .demo {
-                        width: 136px;
-                        height: 46px;
-                        border-radius: 12px;
-                        font-size: 18px;
-                        font-weight: 500;
-                        text-align: center;
-                        padding: inherit;
-                    }
-                    .code:hover,
-                    .demo:hover {
-                        background-color: var(--light-blue);
-                        cursor: pointer;
-                    }
-                    .demo {
-                        background-color: var(--main-blue);
-                        color: white;
-                        margin-right: 10px;
-                    }
-                    .code {
-                        color: var(--main-blue);
-                        border: 1px solid var(--main-blue);
-                    }
+
                     .image {
                         border-radius: 12px;
                         margin-top: 30px;
@@ -102,11 +70,6 @@ const ProjectItem = ({
                         }
                         .linkContainer {
                             justify-content: center;
-                        }
-                        .code,
-                        .demo {
-                            width: 30%;
-                            height: 30%;
                         }
                     }
                 `}
