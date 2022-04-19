@@ -73,9 +73,10 @@ const ExperienceItem = ({
                     @media screen and (max-width: 470px) {
                         .container {
                             flex-direction: column;
+                            margin-bottom: 40px;
                         }
                         .image {
-                            margin: auto;
+                            margin: 0 auto 20px;
                             min-width: 100px;
                         }
                     }
