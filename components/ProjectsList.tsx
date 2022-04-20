@@ -1,9 +1,48 @@
 import ProjectItem from './ProjectItem';
+import FilterButton from './FilterButton';
+import { useState } from 'react';
 
 const ProjectsList = ({ projects }: IProjectsProp) => {
+    const [activeFilter, setActiveFilter] = useState('all');
     return (
         <div className="projects">
-            <h1 className="container rounded">projects</h1>
+            <div className="container rounded">
+                <h1>projects</h1>
+                <div className="filter">
+                    <FilterButton
+                        className="filter_btn"
+                        dataset="all"
+                        activeFilter={activeFilter}
+                        setActiveFilter={setActiveFilter}
+                    >
+                        All
+                    </FilterButton>
+                    <FilterButton
+                        className="filter_btn"
+                        dataset="nextjs"
+                        activeFilter={activeFilter}
+                        setActiveFilter={setActiveFilter}
+                    >
+                        NextJS
+                    </FilterButton>
+                    <FilterButton
+                        className="filter_btn"
+                        dataset="ts"
+                        activeFilter={activeFilter}
+                        setActiveFilter={setActiveFilter}
+                    >
+                        TypeScript
+                    </FilterButton>
+                    <FilterButton
+                        className="filter_btn"
+                        dataset="mui"
+                        activeFilter={activeFilter}
+                        setActiveFilter={setActiveFilter}
+                    >
+                        MaterialUI
+                    </FilterButton>
+                </div>
+            </div>
             {projects.map(({ ...projectItem }) => {
                 return (
                     <ProjectItem
@@ -17,6 +56,8 @@ const ProjectsList = ({ projects }: IProjectsProp) => {
                     .container {
                         margin-bottom: 10px;
                         max-width: 900px;
+                        display: flex;
+                        flex-direction: column;
                     }
                     .projects {
                         margin: 0;

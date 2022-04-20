@@ -127,6 +127,7 @@ img,
 .btn:hover {
     background-color: var(--light-blue);
     cursor: pointer;
+    transition-duration: 0.4s;
 }
 .demo {
     background-color: var(--main-blue);
@@ -137,7 +138,20 @@ img,
     color: var(--main-blue);
     border: 1px solid var(--main-blue);
 }
-
+.filter_btn {
+    border: 1px solid var(--main-blue);
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    padding: 12px;
+    margin: 0 10px 10px 0;
+    color: var(--main-blue);
+}
+.active {
+    background-color: var(--main-blue);
+    color: white;
+}
 /* Media Queries */
 @media screen and (max-width: 1080px) {
     .experiences {
