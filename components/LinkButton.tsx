@@ -12,7 +12,7 @@ const LinkButton = ({ link, className, children }: IButton) => {
             href={link}
             target="_blank"
             rel="noreferrer"
-            className={className + 'btn'}
+            className={className + ' btn'}
         >
             {children}
         </a>
