@@ -8,7 +8,12 @@ interface IButton {
 
 const LinkButton = ({ link, className, children }: IButton) => {
     return (
-        <a href={link} target="_blank" rel="noreferrer" className={className}>
+        <a
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            className={className + 'btn'}
+        >
             {children}
         </a>
     );

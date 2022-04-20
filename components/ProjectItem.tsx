@@ -26,10 +26,10 @@ const ProjectItem = ({
                 <h3 className="title">{title}</h3>
                 <p>{desc}</p>
                 <div className="linkContainer">
-                    <LinkButton className="demo btn" link={demoLink}>
+                    <LinkButton className="demo" link={demoLink}>
                         Demo
                     </LinkButton>
-                    <LinkButton className="code btn" link={codeLink}>
+                    <LinkButton className="code" link={codeLink}>
                         Code
                     </LinkButton>
                 </div>
