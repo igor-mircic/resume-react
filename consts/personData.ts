@@ -69,7 +69,7 @@ export const personData: IData = {
     projects: [
         {
             img: project1,
-            tags: '#CSS #HTML #responsive #React #TypeScript',
+            tags: ['css', 'html', 'responsive', 'react', 'typescript'],
             title: 'Resume page',
             desc: "This project is a portfolio and resume page in one. The technologies I've used include CSS, HTML, TypeScript, NextJS, StyledJSX, etc.",
             demoLink: 'https://resume-cicd.vercel.app/',

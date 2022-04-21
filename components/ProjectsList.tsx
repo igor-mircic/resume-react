@@ -1,9 +1,25 @@
 import ProjectItem from './ProjectItem';
 import FilterButton from './FilterButton';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const ProjectsList = ({ projects }: IProjectsProp) => {
     const [activeFilter, setActiveFilter] = useState('all');
+    const [projectList, setProjectList] = useState<JSX.Element[]>();
+    useEffect(() => {
+        if (activeFilter === 'all') {
+            setProjectList((): JSX.Element[] => {
+                return projects.map(({ ...projectItem }) => {
+                    return (
+                        <ProjectItem
+                            {...projectItem}
+                            key={projectItem.title}
+                        ></ProjectItem>
+                    );
+                });
+            });
+        }
+    }, [activeFilter]);
+
     return (
         <div className="projects">
             <div className="container rounded">
@@ -43,14 +59,7 @@ const ProjectsList = ({ projects }: IProjectsProp) => {
                     </FilterButton>
                 </div>
             </div>
-            {projects.map(({ ...projectItem }) => {
-                return (
-                    <ProjectItem
-                        {...projectItem}
-                        key={projectItem.title}
-                    ></ProjectItem>
-                );
-            })}
+            {projectList}
             <style jsx>
                 {`
                     .container {
