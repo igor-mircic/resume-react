@@ -22,7 +22,11 @@ const ProjectItem = ({
             </div>
 
             <div className="subContainer">
-                <p className="tags">{tags}</p>
+                <p className="tags">
+                    {tags.map((tag) => {
+                        return '#' + tag + ' ';
+                    })}
+                </p>
                 <h3 className="title">{title}</h3>
                 <p>{desc}</p>
                 <div className="linkContainer">
