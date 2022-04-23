@@ -5,25 +5,49 @@ import { useEffect, useState } from 'react';
 const ProjectsList = ({ projects }: IProjectsProp) => {
     const [activeFilter, setActiveFilter] = useState('all');
     const [projectList, setProjectList] = useState<JSX.Element[]>();
+    const [projectNumber, setProjectNumber] = useState(0);
     useEffect(() => {
-        if (activeFilter === 'all') {
-            setProjectList((): JSX.Element[] => {
-                return projects.map(({ ...projectItem }) => {
-                    return (
-                        <ProjectItem
-                            {...projectItem}
-                            key={projectItem.title}
-                        ></ProjectItem>
-                    );
+        switch (activeFilter) {
+            case 'all':
+                setProjectNumber(projects.length);
+                setProjectList((): JSX.Element[] => {
+                    return projects.map(({ ...projectItem }) => {
+                        return (
+                            <ProjectItem
+                                {...projectItem}
+                                key={projectItem.title}
+                            ></ProjectItem>
+                        );
+                    });
                 });
-            });
+                break;
+            case 'nextjs':
+            case 'typescript':
+            case 'materialui':
+                const result = projects.filter((obj) =>
+                    obj.tags.includes(activeFilter)
+                );
+                setProjectNumber(result.length);
+                setProjectList((): JSX.Element[] => {
+                    return result.map(({ ...projectItem }) => {
+                        return (
+                            <ProjectItem
+                                {...projectItem}
+                                key={projectItem.title}
+                            ></ProjectItem>
+                        );
+                    });
+                });
+                break;
+            default:
+                alert('These are not the droids you are looking for.');
         }
     }, [activeFilter]);
 
     return (
         <div className="projects">
             <div className="container rounded">
-                <h1>projects</h1>
+                <h1>projects ({projectNumber})</h1>
                 <div className="filter">
                     <FilterButton
                         className="filter_btn"
@@ -43,7 +67,7 @@ const ProjectsList = ({ projects }: IProjectsProp) => {
                     </FilterButton>
                     <FilterButton
                         className="filter_btn"
-                        dataset="ts"
+                        dataset="typescript"
                         activeFilter={activeFilter}
                         setActiveFilter={setActiveFilter}
                     >
@@ -51,7 +75,7 @@ const ProjectsList = ({ projects }: IProjectsProp) => {
                     </FilterButton>
                     <FilterButton
                         className="filter_btn"
-                        dataset="mui"
+                        dataset="materialui"
                         activeFilter={activeFilter}
                         setActiveFilter={setActiveFilter}
                     >
@@ -71,6 +95,9 @@ const ProjectsList = ({ projects }: IProjectsProp) => {
                     .projects {
                         margin: 0;
                         padding: 0;
+                    }
+                    .projects button:hover {
+                        transform: scale(1.5);
                     }
                     @media screen and (max-width: 780px) {
                         .container {

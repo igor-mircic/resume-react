@@ -129,6 +129,9 @@ img,
     cursor: pointer;
     transition-duration: 0.4s;
 }
+.projects button:hover {
+    transform: scale(1.2);
+}
 .demo {
     background-color: var(--main-blue);
     color: white;
