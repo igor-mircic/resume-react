@@ -6,17 +6,50 @@ const ProjectsList = ({ projects }: IProjectsProp) => {
     const [activeFilter, setActiveFilter] = useState('all');
     const [projectList, setProjectList] = useState<JSX.Element[]>();
     useEffect(() => {
-        if (activeFilter === 'all') {
-            setProjectList((): JSX.Element[] => {
-                return projects.map(({ ...projectItem }) => {
-                    return (
-                        <ProjectItem
-                            {...projectItem}
-                            key={projectItem.title}
-                        ></ProjectItem>
-                    );
+        // if (activeFilter === 'all') {
+        //     setProjectList((): JSX.Element[] => {
+        //         return projects.map(({ ...projectItem }) => {
+        //             return (
+        //                 <ProjectItem
+        //                     {...projectItem}
+        //                     key={projectItem.title}
+        //                 ></ProjectItem>
+        //             );
+        //         });
+        //     });
+        // }
+        switch (activeFilter) {
+            case 'all':
+                setProjectList((): JSX.Element[] => {
+                    return projects.map(({ ...projectItem }) => {
+                        return (
+                            <ProjectItem
+                                {...projectItem}
+                                key={projectItem.title}
+                            ></ProjectItem>
+                        );
+                    });
                 });
-            });
+                break;
+            case 'nextjs':
+            case 'typescript':
+            case 'materialui':
+                const result = projects.filter((obj) =>
+                    obj.tags.includes(activeFilter)
+                );
+                setProjectList((): JSX.Element[] => {
+                    return result.map(({ ...projectItem }) => {
+                        return (
+                            <ProjectItem
+                                {...projectItem}
+                                key={projectItem.title}
+                            ></ProjectItem>
+                        );
+                    });
+                });
+                break;
+            default:
+                alert('These are not the droids you are looking for.');
         }
     }, [activeFilter]);
 
@@ -43,7 +76,7 @@ const ProjectsList = ({ projects }: IProjectsProp) => {
                     </FilterButton>
                     <FilterButton
                         className="filter_btn"
-                        dataset="ts"
+                        dataset="typescript"
                         activeFilter={activeFilter}
                         setActiveFilter={setActiveFilter}
                     >
@@ -51,7 +84,7 @@ const ProjectsList = ({ projects }: IProjectsProp) => {
                     </FilterButton>
                     <FilterButton
                         className="filter_btn"
-                        dataset="mui"
+                        dataset="materialui"
                         activeFilter={activeFilter}
                         setActiveFilter={setActiveFilter}
                     >
