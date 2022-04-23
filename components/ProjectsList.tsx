@@ -1,22 +1,96 @@
 import ProjectItem from './ProjectItem';
+import FilterButton from './FilterButton';
+import { useEffect, useState } from 'react';
 
 const ProjectsList = ({ projects }: IProjectsProp) => {
+    const [activeFilter, setActiveFilter] = useState('all');
+    const [projectList, setProjectList] = useState<JSX.Element[]>();
+    const [projectNumber, setProjectNumber] = useState(0);
+    useEffect(() => {
+        switch (activeFilter) {
+            case 'all':
+                setProjectNumber(projects.length);
+                setProjectList((): JSX.Element[] => {
+                    return projects.map(({ ...projectItem }) => {
+                        return (
+                            <ProjectItem
+                                {...projectItem}
+                                key={projectItem.title}
+                            ></ProjectItem>
+                        );
+                    });
+                });
+                break;
+            case 'nextjs':
+            case 'typescript':
+            case 'materialui':
+                const result = projects.filter((obj) =>
+                    obj.tags.includes(activeFilter)
+                );
+                setProjectNumber(result.length);
+                setProjectList((): JSX.Element[] => {
+                    return result.map(({ ...projectItem }) => {
+                        return (
+                            <ProjectItem
+                                {...projectItem}
+                                key={projectItem.title}
+                            ></ProjectItem>
+                        );
+                    });
+                });
+                break;
+            default:
+                alert('These are not the droids you are looking for.');
+        }
+    }, [activeFilter]);
+
     return (
         <div className="projects">
-            <h1 className="container rounded">projects</h1>
-            {projects.map(({ ...projectItem }) => {
-                return (
-                    <ProjectItem
-                        {...projectItem}
-                        key={projectItem.title}
-                    ></ProjectItem>
-                );
-            })}
+            <div className="container rounded">
+                <h1>projects ({projectNumber})</h1>
+                <div className="filter">
+                    <FilterButton
+                        className="filter_btn"
+                        dataset="all"
+                        activeFilter={activeFilter}
+                        setActiveFilter={setActiveFilter}
+                    >
+                        All
+                    </FilterButton>
+                    <FilterButton
+                        className="filter_btn"
+                        dataset="nextjs"
+                        activeFilter={activeFilter}
+                        setActiveFilter={setActiveFilter}
+                    >
+                        NextJS
+                    </FilterButton>
+                    <FilterButton
+                        className="filter_btn"
+                        dataset="typescript"
+                        activeFilter={activeFilter}
+                        setActiveFilter={setActiveFilter}
+                    >
+                        TypeScript
+                    </FilterButton>
+                    <FilterButton
+                        className="filter_btn"
+                        dataset="materialui"
+                        activeFilter={activeFilter}
+                        setActiveFilter={setActiveFilter}
+                    >
+                        MaterialUI
+                    </FilterButton>
+                </div>
+            </div>
+            {projectList}
             <style jsx>
                 {`
                     .container {
                         margin-bottom: 10px;
                         max-width: 900px;
+                        display: flex;
+                        flex-direction: column;
                     }
                     .projects {
                         margin: 0;

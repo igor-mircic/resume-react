@@ -16,7 +16,7 @@ interface IExperience extends IHobbies {
     dateEnd: string;
 }
 interface IProject extends IHobbies {
-    tags: string;
+    tags: string[];
     demoLink: string;
     codeLink: string;
 }

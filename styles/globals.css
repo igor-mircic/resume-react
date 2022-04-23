@@ -128,6 +128,9 @@ img,
     background-color: var(--light-blue);
     cursor: pointer;
 }
+.projects button:hover {
+    transform: scale(1.2);
+}
 .demo {
     background-color: var(--main-blue);
     color: white;
