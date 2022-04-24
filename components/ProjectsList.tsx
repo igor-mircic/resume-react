@@ -6,42 +6,37 @@ const ProjectsList = ({ projects }: IProjectsProp) => {
     const [activeFilter, setActiveFilter] = useState('all');
     const [projectList, setProjectList] = useState<JSX.Element[]>();
     const [projectNumber, setProjectNumber] = useState(0);
+    console.log(activeFilter);
+
     useEffect(() => {
-        switch (activeFilter) {
-            case 'all':
-                setProjectNumber(projects.length);
-                setProjectList((): JSX.Element[] => {
-                    return projects.map(({ ...projectItem }) => {
-                        return (
-                            <ProjectItem
-                                {...projectItem}
-                                key={projectItem.title}
-                            ></ProjectItem>
-                        );
-                    });
+        if (activeFilter == 'all') {
+            setProjectNumber(projects.length);
+            setProjectList((): JSX.Element[] => {
+                return projects.map(({ ...projectItem }) => {
+                    return (
+                        <ProjectItem
+                            {...projectItem}
+                            key={projectItem.title}
+                        ></ProjectItem>
+                    );
                 });
-                break;
-            case 'nextjs':
-            case 'typescript':
-            case 'materialui':
-                const result = projects.filter((obj) =>
-                    obj.tags.includes(activeFilter)
-                );
-                setProjectNumber(result.length);
-                setProjectList((): JSX.Element[] => {
-                    return result.map(({ ...projectItem }) => {
-                        return (
-                            <ProjectItem
-                                {...projectItem}
-                                key={projectItem.title}
-                            ></ProjectItem>
-                        );
-                    });
-                });
-                break;
-            default:
-                alert('These are not the droids you are looking for.');
+            });
+            return;
         }
+        const result = projects.filter((obj) =>
+            obj.tags.includes(activeFilter)
+        );
+        setProjectNumber(result.length);
+        setProjectList((): JSX.Element[] => {
+            return result.map(({ ...projectItem }) => {
+                return (
+                    <ProjectItem
+                        {...projectItem}
+                        key={projectItem.title}
+                    ></ProjectItem>
+                );
+            });
+        });
     }, [activeFilter]);
 
     return (
