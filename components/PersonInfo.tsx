@@ -30,7 +30,7 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
                     .container {
                         width: 413px;
                         padding: 30px;
-                        height: 719px;
+                        height: 643px;
                     }
                     h1 {
                         margin: 30px 0 0;
