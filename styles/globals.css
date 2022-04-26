@@ -66,6 +66,8 @@ main {
 }
 .projects {
     grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 5;
 }
 .skills {
     grid-column-start: 2;
