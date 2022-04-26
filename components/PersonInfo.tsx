@@ -57,6 +57,7 @@ const PersonInfo = ({ img, name, job, email, phone, desc }: IPersonInfo) => {
                     @media screen and (max-width: 780px) {
                         .container {
                             width: 100%;
+                            height: 100%;
                         }
                         .flexContainer p {
                             text-align: left;
