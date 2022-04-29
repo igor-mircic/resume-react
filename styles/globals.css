@@ -103,6 +103,10 @@ footer {
 }
 footer p {
     text-align: center;
+    padding: 0.3rem;
+}
+.bold {
+    font-weight: 900;
 }
 img,
 .rounded {

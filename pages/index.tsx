@@ -7,6 +7,7 @@ import ExperiencesList from '../components/ExperiencesList';
 import HobbiesList from '../components/HobbiesList';
 import SkillsList from '../components/SkillsList';
 import ProjectsList from '../components/ProjectsList';
+import Footer from '../components/Footer';
 // data
 import { MladenData } from '../consts/MladenData';
 
@@ -29,11 +30,7 @@ const Home: NextPage = () => {
                 <HobbiesList {...{ hobbies }}></HobbiesList>
             </main>
 
-            <footer>
-                <p>
-                    created by <span>{personInfo.name}</span> - devChallenges.io
-                </p>
-            </footer>
+            <Footer name={personInfo.name}></Footer>
             <style jsx>
                 {`
                     span {
